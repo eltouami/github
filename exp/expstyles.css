@@ -1,0 +1,17 @@
+* {
+    background-color: #FFFEFB;
+    text-align: center;
+    font-family: DotGothic16, sans-serif;
+    color: #1f284e;
+}
+
+h1 {
+    font-weight: 700;
+    padding-top: 100px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: large;
+    padding: 5px 50px 5px 50px;
+}
