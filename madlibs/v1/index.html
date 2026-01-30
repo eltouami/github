@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <title>Mad Libs Verson 1</title>
+
+<!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IM+Fell+English:ital@0;1&family=Instrument+Serif:ital@0;1&family=Roboto+Mono:wght@100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!-- links -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script> 
+
+</head>
+<body>
+    <header>
+        <h1>Flights</h1>
+    </header>
+
+    <main>
+        <form>
+            <!-- drop down(s) 
+             location, date-->
+            <!-- <label for="date1">Depart date</label>
+            <input type="date" name="date1" id="date1"> -->
+
+            <label for="type">Type of trip</label>
+            <select id="type">
+                <option value="none" selected>---</option>
+                <option value="one-way">one way</option>
+                <option value="round-trip">round trip</option>
+            </select>
+
+            <label for="noun">Noun:</label>
+            <input type="text" name="noun" id="noun" required>
+            <label for="verb">Verb:</label>
+            <input type="text" name="verb" id="verb" required>
+            <label for="adjective">Adjective:</label>
+            <input type="text" name="adjective" id="adjective" required>
+            <label for="adverb">Adverb:</label>
+            <input type="text" name="adverb" id="adverb" required>
+
+
+            <input type="submit">
+        </form>
+    </main>
+
+</body>
+</html>
