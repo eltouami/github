@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+    /* background: linear-gradient(180deg, #d4e4f0 0%, #a8c5dd 100%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-image: url("../images/form.svg");
+}
+
+.container {
+    width: 1000px;
+    height: 700px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    padding: 0 40px;
+    z-index: 10;
+} */
+
+.logo {
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+}
+
+.portal-link {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 20px;
+    z-index: 10;
+}
+
+/* input text/madlibs part form */
+.form-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 25px 40px;
+    width: 100%;
+    max-width: 1080px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.location-row {
+    position: relative;
+    align-items: center;
+}
+
+.form-group {
+    flex: 1;
+    position: relative;
+}
+
+.location-group {
+    flex: 1.5;
+}
+
+.date-group {
+    flex: 0.8;
+}
+
+/* next few parts used help from css websites like W3 */
+select,
+input[type="text"] {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    background: white;
+    color: #666;
+    transition: border-color 0.3s;
+}
+
+select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23666' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    padding-right: 50px;
+}
+
+/* focus area on text */
+select:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: #7ba3c4;
+}
+
+input[type="text"]::placeholder {
+    color: #999;
+}
+
+.arrow {
+    font-size: 24px;
+    color: #999;
+    flex-shrink: 0;
+    margin: 0 5px;
+}
+
+.input-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.input-table thead th {
+    padding: 10px 12px;
+    text-align: center;
+    font-size: 15px;
+    color: #666;
+    font-weight: 500;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.input-table tbody th {
+    padding: 10px 12px;
+    text-align: center;
+    font-size: 15px;
+    color: #666;
+    font-weight: 500;
+    background-color: #f8f8f8;
+}
+
+.input-table td {
+    padding: 8px 8px;
+    text-align: center;
+}
+
+.input-table input[type="text"] {
+    text-align: center;
+    padding: 10px 12px;
+}
+
+.submit-btn {
+    display: block;
+    margin: 25px auto 0;
+    padding: 16px 50px;
+    font-size: 28px;
+    font-weight: 300;
+    color: white;
+    background: #7ba3c4;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(123, 163, 196, 0.3);
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    /* hover state */
+    background: #6b93b4;
+    box-shadow: 0 12px 35px rgba(123, 163, 196, 0.4);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    /* makes button move */
+    transform: translateY(0);
+    box-shadow: 0 8px 25px rgba(123, 163, 196, 0.3);
+}
