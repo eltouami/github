@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <title>Mad Libs Verson 2 Code</title>
+
+<!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IM+Fell+English:ital@0;1&family=Instrument+Serif:ital@0;1&family=Roboto+Mono:wght@100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!-- links -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script> 
+
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="header">
+            <div class="logo">Mad libs</div>
+            <div class="portal-link">To Portal</div>
+        </div> -->
+
+        <h1>Flights</h1>
+
+        <div class="form-card">
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <select name="flight-type" id="flight-type">
+                            <option value="">type of flight</option>
+                            <option value="domestic">Domestic</option>
+                            <option value="international">International</option>
+                            <option value="private">Private</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select name="number" id="number">
+                            <option value="">number of travelers</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select name="seat-type" id="seat-type">
+                            <option value="">seat type</option>
+                            <option value="economy">Economy</option>
+                            <option value="business">Business</option>
+                            <option value="first-class">First Class</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row location-row">
+                    <div class="form-group location-group">
+                        <input type="text" name="from-location" placeholder="place/location">
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="form-group location-group">
+                        <input type="text" name="to-location" placeholder="place/location">
+                    </div>
+                    <div class="form-group date-group">
+                        <input type="text" name="date-from" placeholder="date: MM/DD">
+                    </div>
+                    <div class="form-group date-group">
+                        <input type="text" name="date-to" placeholder="date: MM/DD">
+                    </div>
+                </div>
+
+                <table class="input-table">
+                    <thead>
+                        <tr>
+                            <th>noun</th>
+                            <th>plural noun</th>
+                            <th>preposition</th>
+                            <th>adverb</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="noun1"></td>
+                            <td><input type="text" name="plural-noun1"></td>
+                            <td><input type="text" name="preposition1"></td>
+                            <td><input type="text" name="adverb1"></td>
+                        </tr>
+                        <tr>
+                            <th>verb</th>
+                            <th>noun</th>
+                            <th>adjective</th>
+                            <th>verb</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="verb1"></td>
+                            <td><input type="text" name="noun2"></td>
+                            <td><input type="text" name="adjective1"></td>
+                            <td><input type="text" name="verb2"></td>
+                        </tr>
+                        <tr>
+                            <th>verb</th>
+                            <th>noun</th>
+                            <th>adjective</th>
+                            <th>verb</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="verb3"></td>
+                            <td><input type="text" name="noun3"></td>
+                            <td><input type="text" name="adjective2"></td>
+                            <td><input type="text" name="verb4"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <button type="submit" class="submit-btn">Print your ticket!</button>
+    </div>
+
+</body>
+</html>
