@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-    <title>Mad Libs Verson 2 Code</title>
+    <title>Mad Libs Version 2 Code</title>
 
 <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,10 +17,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- <div class="header">
-            <div class="logo">Mad libs</div>
-            <div class="portal-link">To Portal</div>
-        </div> -->
 
         <h1>Flights</h1>
 
@@ -57,62 +53,62 @@
 
                 <div class="form-row location-row">
                     <div class="form-group location-group">
-                        <input type="text" name="from-location" placeholder="place/location">
+                        <input type="text" name="departure-city" id="departure-city" placeholder="Departure City">
                     </div>
                     <div class="arrow">→</div>
                     <div class="form-group location-group">
-                        <input type="text" name="to-location" placeholder="place/location">
+                        <input type="text" name="destination-city" id="destination-city" placeholder="Destination City">
                     </div>
                     <div class="form-group date-group">
-                        <input type="text" name="date-from" placeholder="date: MM/DD">
+                        <input type="text" name="departure-date" id="departure-date" placeholder="Departure Date">
                     </div>
                     <div class="form-group date-group">
-                        <input type="text" name="date-to" placeholder="date: MM/DD">
+                        <input type="text" name="arrival-date" id="arrival-date" placeholder="Arrival Date">
                     </div>
                 </div>
 
-                <table class="input-table">
-                    <thead>
-                        <tr>
-                            <th>noun</th>
-                            <th>plural noun</th>
-                            <th>preposition</th>
-                            <th>adverb</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="text" name="noun1"></td>
-                            <td><input type="text" name="plural-noun1"></td>
-                            <td><input type="text" name="preposition1"></td>
-                            <td><input type="text" name="adverb1"></td>
-                        </tr>
-                        <tr>
-                            <th>verb</th>
-                            <th>noun</th>
-                            <th>adjective</th>
-                            <th>verb</th>
-                        </tr>
-                        <tr>
-                            <td><input type="text" name="verb1"></td>
-                            <td><input type="text" name="noun2"></td>
-                            <td><input type="text" name="adjective1"></td>
-                            <td><input type="text" name="verb2"></td>
-                        </tr>
-                        <tr>
-                            <th>verb</th>
-                            <th>noun</th>
-                            <th>adjective</th>
-                            <th>verb</th>
-                        </tr>
-                        <tr>
-                            <td><input type="text" name="verb3"></td>
-                            <td><input type="text" name="noun3"></td>
-                            <td><input type="text" name="adjective2"></td>
-                            <td><input type="text" name="verb4"></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="madlibs-inputs">
+                    <div class="input-row">
+                        <div class="input-field">
+                            <label for="adjective1">Adjective (Feeling)</label>
+                            <input type="text" name="adjective1" id="adjective1">
+                        </div>
+                        <div class="input-field">
+                            <label for="noun1">Noun (Security item)</label>
+                            <input type="text" name="noun1" id="noun1">
+                        </div>
+                        <div class="input-field">
+                            <label for="famous-person">Famous Person</label>
+                            <input type="text" name="famous-person" id="famous-person">
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-field">
+                            <label for="food">Food</label>
+                            <input type="text" name="food" id="food">
+                        </div>
+                        <div class="input-field">
+                            <label for="liquid">Liquid</label>
+                            <input type="text" name="liquid" id="liquid">
+                        </div>
+                        <div class="input-field">
+                            <label for="adjective2">Adjective (Descriptive)</label>
+                            <input type="text" name="adjective2" id="adjective2">
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-field">
+                            <label for="adjective3">Adjective (Vibe)</label>
+                            <input type="text" name="adjective3" id="adjective3">
+                        </div>
+                        <div class="input-field">
+                            <label for="plural-noun">Plural Noun (Sights)</label>
+                            <input type="text" name="plural-noun" id="plural-noun">
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
         <button type="submit" class="submit-btn">Print your ticket!</button>
