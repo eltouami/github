@@ -93,7 +93,7 @@ img {
 }
 
 .star1 {
-    top: 50px;
+    top: 40px;
     right: 135px;
     width: 195px;
     animation: spin2 6s linear infinite;
@@ -101,19 +101,19 @@ img {
 }
 
 .star2 {
-    top: 180px;
+    top: 170px;
     right: 80px;
     width: 80px;
-    animation: wiggle 3s linear infinite;
+    animation: wiggle 5s linear infinite;
     transform: center center;
 }
 
 .star3 {
-    bottom: 140px;
-    left: 140px;
+    bottom: 180px;
+    left: 60px;
     width: 110px;
     rotate: -55deg;
-    animation: wiggle 2s linear infinite;
+    animation: wiggle 3s linear infinite;
     transform: center center;
 }
 
