@@ -14,10 +14,10 @@ body {
     padding: 0;
     background-color: #FFFEFB;
     /* background graphic test */
-    /* background-image: url(images/anim\ portal.png);
+    background-image: url(images/bgrnd\ portal.png);
     image-rendering: pixelated;
     background-position: top center;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
 }
 
 #container {
@@ -40,7 +40,14 @@ header {
     overflow: hidden;
 }
 
-.banner-background {
+.time {
+    text-align: right;
+    position: absolute;
+    top: 300px;
+    right: 50px;
+}
+
+/* .banner-background {
     width: 100%;
     height: 100%;
     background-image: url('images/anim\ banner.png');
@@ -48,9 +55,10 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     animation: float-image 6s ease-in-out infinite;
-}
+} */
 
-@keyframes float-image {
+/* OLD animation */
+/* @keyframes float-image { 
     0%, 100% {
         transform: translate(0, 0);
     }
@@ -63,14 +71,94 @@ header {
     75% {
         transform: translate(5px, 8px);
     }
-}
+} */
 
 
 /* main */
 main {
     display: flex;
     gap: 20px;
-    padding: 0 50px 50px;
+    padding: 80px 50px 35px;
+}
+
+img {
+    border-style: none;
+}
+
+/* spinning stars etc. */
+.floating {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.star1 {
+    top: 50px;
+    right: 135px;
+    width: 195px;
+    animation: spin2 6s linear infinite;
+    transform: center center;
+}
+
+.star2 {
+    top: 180px;
+    right: 80px;
+    width: 80px;
+    animation: wiggle 3s linear infinite;
+    transform: center center;
+}
+
+.star3 {
+    bottom: 140px;
+    left: 140px;
+    width: 110px;
+    rotate: -55deg;
+    animation: wiggle 2s linear infinite;
+    transform: center center;
+}
+
+.swirl {
+    bottom: 75px;
+    right: 150px;
+    width: 95px;
+    animation: spin 8s linear infinite;
+    transform: center center;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 /* columns */
@@ -84,7 +172,7 @@ main {
     padding: 30px 25px;
     transition: all 0.4s ease;
     cursor: pointer;
-    min-height: 250px;
+    min-height: 300px;
 }
 
 .card:hover {

@@ -1,0 +1,225 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial;
+	color: #333;
+}
+
+main {
+	width: 30vw;
+	padding: 20px;
+}
+
+section {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+figure {
+	display: block;
+	margin: 0;
+	width: 70vw;
+	height: 100vh;
+	position: fixed;
+	top:0;
+	right:0;
+	overflow: hidden;
+}
+
+figure img {
+	position: absolute;
+	transition: all 3s ease;
+}
+
+.sect1{
+	width: 147vh; /*147% the height of the image is the width ratio*/
+	top:0;
+	left: 50%;
+	transform:translateX(-50%);
+	
+}
+figure figcaption{
+	width: 50%;
+	position: absolute;
+	left: 50%;
+	top: 105%;
+	transform: translateX(-50%);
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 10px;
+	padding: 20px;
+	line-height: 1.5em;
+}
+
+.animate {
+	animation-duration: 700ms;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.075, 0.820, 0.165, 1.000);
+}
+
+.enterup {
+	animation-name: enterup;
+	animation-delay: .5s;	
+}
+
+.enterdown {
+	animation-name: enterdown;
+	animation-delay: .5s;
+}
+
+.exitup {
+	animation-name: exitup;
+}
+
+.exitdown {
+	animation-name: exitdown;
+}
+
+@keyframes enterup {
+	0%{
+		top: 105%;
+	}
+	100% {
+		top: 50%;
+	}
+}
+
+@keyframes enterdown {
+	0%{
+		top: -20%;
+	}
+	100% {
+		top: 50%;
+	}
+}
+
+@keyframes exitup {
+	0%{
+		top: 50%;
+	}
+	100% {
+		top: -20%;
+	}
+}
+
+@keyframes exitdown {
+	0%{
+		top: 50%;
+	}
+	100% {
+		top: 105%;
+	}
+}
+
+.sect2,
+.sect3,
+.sect4,
+.sect5,
+.sect6{
+    width: 3768px;
+}
+
+.sect2 {
+    top: 0;
+    left: 0;
+}
+
+.sect3 {
+    top: 0;
+    left: calc(-3768px + 70vw);
+}
+
+.sect4 {
+	top: calc(-2567px + 100vh);
+    left: 0;
+}
+
+.sect5 {
+    top: calc(-2567px + 100vh);
+    left: calc(-3768px + 70vw);
+}
+
+.sect6 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/************** CSS Loader ****************/
+
+#preloader{
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: radial-gradient(circle, rgba(0,63,255,1) 0%, rgba(5,8,74,1) 100%);
+	color: #fff;
+	font-size: 3em;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#preloader div:first-of-type {
+	margin-bottom: 50px;
+}
+
+.fadeout {
+	animation-name: fadeout;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+.lds-ripple {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+}
+.lds-ripple div {
+	position: absolute;
+	border: 4px solid #fff;
+	opacity: 1;
+	border-radius: 50%;
+	animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+	animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+	0% {
+		top: 36px;
+		left: 36px;
+		width: 0;
+		height: 0;
+		opacity: 1;
+	}
+	100% {
+		top: 0px;
+		left: 0px;
+		width: 72px;
+		height: 72px;
+		opacity: 0;
+	}
+}
+
+@keyframes fadeout {
+	0%{
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+
+
