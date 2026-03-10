@@ -1,0 +1,321 @@
+/* setup css */
+* {
+	box-sizing: border-box;
+}
+
+nav ul, nav ol {
+	list-style-type: none;
+}
+
+h1, h2, h3, h4, p, a, button, label, input{
+	font-family: "Fredoka";
+	margin: 0;
+	padding: 0;
+}
+
+/* background image to change */
+body {
+	background-color: #f3f8fb;
+    background-image: url('images/p1\ background.png');
+    background-size: cover;
+	overflow: hidden;
+    line-height: 1.5em;
+}
+
+h1, h2, h3 {
+    font-family: Darumadrop One;
+}
+
+h1 {
+	text-align: center;
+	font-size: 6em;
+	letter-spacing: 3px;
+	color: #c3e2fb;
+	-webkit-text-stroke-width: 6px;
+	-webkit-text-stroke-color: #284673;
+	paint-order: stroke fill;
+}
+
+header {
+	display: flex;
+    flex-direction: column;
+	gap: 50px;
+	margin: auto;
+	justify-content: center;
+    align-items: center;
+	margin-top: 70px;
+}
+
+header h3 {
+    font-size: 32px;
+    color: #284673;
+}
+
+/* control settings */
+
+#controlArea{
+	display: flex;
+    flex-direction: row-reverse;
+	gap: 10px;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+
+#controlArea .icon {
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	width: 45px;
+	height: 45px;
+	justify-content: center;
+	align-items: center;
+}
+
+/* main game/action area */
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 80px;
+
+	/* positioning */
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform:translate(-50%, -50%);
+}
+
+#gameArea div{
+	align-items: center;
+}
+
+#gameArea img{
+	width: 400px;
+	margin: 12px;
+}
+
+.game-text-js {
+	width: fit-content;
+}
+
+/* player columns */
+
+#player-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bucket {
+	width: 100%;
+    max-width: 200px;
+	margin: 12px;
+}
+
+.score-div{
+	flex: 1;
+	display: flex;
+    flex-direction: column;
+	gap: 30px;
+	margin-bottom: 24px;
+	white-space: nowrap;
+}
+
+.player-text{
+	font-size: 2.3em;
+	letter-spacing: 3px;
+    color: #c3e2fb;
+	-webkit-text-stroke-width: 5px;
+	-webkit-text-stroke-color: #284673;
+	paint-order: stroke fill;
+	
+}
+
+.score-text { 
+    display: flex;
+	font-size: 48px;
+	letter-spacing: 3px;
+    color: #c3e2fb;
+	-webkit-text-stroke-width: 5px;
+	-webkit-text-stroke-color: #284673;
+	paint-order: stroke fill;
+
+	background-color: #ffffff;
+	padding: 4px 16px;
+	border-radius: 8px;
+    border: 2px solid #284673;
+
+    width: 162px;
+    height: 86px;
+	text-align: center;
+	justify-content: center;
+    align-items: center;
+}
+
+/* buttons */
+button {
+	font-family: 'Fredoka', 'Roboto', sans-serif;
+    font-weight: 500;
+	color: #101e33;
+	border-radius: 40px;
+	padding: 12px 20px;
+	border: 2.5px solid #284673;
+	background: #ffffff;
+}
+
+button:hover{
+	background: #f9fcff;
+    border: 2.3px solid #585e71;
+}
+
+button:active {
+    transform: scale(0.95); 
+}
+
+/* actions */
+
+#actionArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#actionArea button {
+	margin: 8px;
+    text-align: center;
+}
+
+#actionArea p {
+	font-family: "Fredoka", sans-serif;
+	margin-bottom: 10px;
+}
+
+/* rules */
+#overlay.shown{
+    opacity: 1;
+    visibility: visible;
+    animation: showed 0.5s ease-out forwards; 
+}
+
+#overlay.hidden{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#windowed {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+	position: absolute;
+	top: 0%;
+	z-index: 9998;
+}
+
+#overlay {
+    width: 100vw;
+    height: 100vh;
+	position: absolute;
+	top: 0%;
+ 	z-index: 9999; /* in front */
+	opacity: 0;
+    visibility: hidden;
+	transform: translate(-50%, -50%) scale(0.5);
+	transform-origin: center;
+}
+
+@keyframes showed {
+    0% {
+        opacity: 0;
+        transform: scale(0.5); 
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); 
+    }
+}
+
+#overlay div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%, -50%);
+	border-radius: 24px;
+	background-color: white;
+	padding: 40px 120px;
+	border: solid 3px #d6e4ed;
+	z-index: 9999;
+}
+
+#overlay div h1{
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+#overlay div p{
+	font-family: "Fredoka", sans-serif;
+	color: #101e33;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+#overlay div button{
+	width: fit-content;
+}
+
+
+/* game actions + penguin image + dice/fish */
+
+#startGame {
+    white-space: nowrap;
+}
+
+#penguin-wrapper {
+	/* position: absolute; */
+	/* width: 0px;
+	right: 0px;
+	bottom: 0px; */
+	/* display: flex;
+	flex-direction: column;
+	gap: 16px; */
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.visible {
+	visibility: visible;
+}
+
+#penguin {
+	width: 100%;
+	height: auto;
+    max-width: 500px;
+	display: block;
+	/* visibility: hidden; */
+}
+
+.dice {
+	/* dice */
+	width: 40%;
+	margin-top: 12px;
+}
+
+.js-text{
+	font-family: "Fredoka", sans-serif;
+}
