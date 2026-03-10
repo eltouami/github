@@ -284,15 +284,15 @@ button:active {
     white-space: nowrap;
 }
 
-#penguin-wrapper {
-	/* position: absolute; */
-	/* width: 0px;
+/* #penguin-wrapper {
+	position: absolute;
+	width: 0px;
 	right: 0px;
-	bottom: 0px; */
-	/* display: flex;
+	bottom: 0px;
+	display: flex;
 	flex-direction: column;
-	gap: 16px; */
-}
+	gap: 16px;
+} */
 
 .hidden {
 	visibility: hidden;
