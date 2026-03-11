@@ -117,6 +117,7 @@ main {
 
 .score-div{
 	flex: 1;
+    /* dont need flex? */
 	display: flex;
     flex-direction: column;
 	gap: 30px;
@@ -135,6 +136,7 @@ main {
 }
 
 .score-text { 
+    /* not need flex */
     display: flex;
 	font-size: 48px;
 	letter-spacing: 3px;
@@ -150,6 +152,7 @@ main {
 
     width: 162px;
     height: 86px;
+    padding-bottom: 15px;
 	text-align: center;
 	justify-content: center;
     align-items: center;
@@ -182,7 +185,7 @@ button:active {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 
 #actionArea button {
@@ -318,4 +321,10 @@ button:active {
 
 .js-text{
 	font-family: "Fredoka", sans-serif;
+}
+
+/* media */
+
+@media screen and (max-width: 600px) {
+  
 }
