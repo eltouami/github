@@ -1,4 +1,5 @@
 /* setup css */
+
 * {
 	box-sizing: border-box;
 }
@@ -11,15 +12,6 @@ h1, h2, h3, p, a, button, label, input{
 	font-family: "Fredoka";
 	margin: 0;
 	padding: 0;
-}
-
-/* background image to change */
-body {
-	background-color: #f3f8fb;
-    background-image: url('images/p1\ background.png');
-    background-size: cover;
-	overflow: hidden;
-    line-height: 1.5em;
 }
 
 h1, h2, h3 {
@@ -36,10 +28,20 @@ h1 {
 	paint-order: stroke fill;
 }
 
+/* body + header */
+
+body {
+	background-color: #f3f8fb;
+    background-image: url('images/background.png');
+    background-size: cover;
+	overflow: hidden;
+    line-height: 1.5em;
+}
+
 header {
 	display: flex;
     flex-direction: column;
-	gap: 50px;
+	gap: 58px;
 	margin: auto;
 	justify-content: center;
     align-items: center;
@@ -56,7 +58,7 @@ header h3 {
 #controlArea{
 	display: flex;
     flex-direction: row-reverse;
-	gap: 10px;
+	gap: 8px;
 	position: absolute;
 	top: 30px;
 	right: 30px;
@@ -72,7 +74,7 @@ header h3 {
 	align-items: center;
 }
 
-/* main game/action area */
+/* main game */
 
 main {
 	display: flex;
@@ -87,31 +89,20 @@ main {
 	transform:translate(-50%, -50%);
 }
 
-#gameArea div{
-	align-items: center;
-}
-
-#gameArea img{
-	width: 400px;
-	margin: 12px;
-}
-
-.game-text-js {
-	width: fit-content;
-}
-
 /* player columns */
 
-#player-column {
+.player-column {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+	padding: 20px;
 }
 
 .bucket {
-	width: 100%;
-    max-width: 200px;
+	width: 200px;
+	height: auto;
+    /* max-width: 200px; */
 	margin: 12px;
 }
 
@@ -136,7 +127,6 @@ main {
 }
 
 .score-text { 
-    /* not need flex */
     display: flex;
 	font-size: 48px;
 	letter-spacing: 3px;
@@ -148,7 +138,7 @@ main {
 	background-color: #ffffff;
 	padding: 4px 16px;
 	border-radius: 8px;
-    border: 2px solid #284673;
+    border: 2.5px solid #284673;
 
     width: 162px;
     height: 86px;
@@ -158,59 +148,98 @@ main {
     align-items: center;
 }
 
+/* actions area */
+
+#actionArea {
+	position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#dice {
+	position: absolute;
+    left: 15%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#dice.mirrored {
+    left: auto;
+    right: 12%;
+}
+
+#dice img {
+    width: 80px;
+    height: auto;
+}
+
+#penguin {
+	width: 400px;
+	height: auto;
+    max-width: 500px;
+	display: block;
+	/* visibility: hidden; */
+}
+
+#action-buttons {
+	display: flex;
+    gap:8px;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+}
+
+#action-buttons button {
+	padding: 12px 40px;
+	font-weight: 500;
+	font-size: 20px;
+}
+
+/* #rollDice {
+} */
+
+#passTurn {
+    background: #fafafa;
+    border: 2.5px solid #97AFC7;
+	color: #97AFC7;
+}
+
+#passTurn:hover {
+    background: #ebedef;
+}
+
 /* buttons */
 button {
 	font-family: 'Fredoka', 'Roboto', sans-serif;
-    font-weight: 500;
-	color: #101e33;
+    font-weight: 450;
+	color: #fafafa;
 	border-radius: 40px;
 	padding: 12px 20px;
-	border: 2.5px solid #284673;
-	background: #ffffff;
+	border: none;
+	/* border: 2.5px solid #97AFC7; */
+	background: #97AFC7;
+	cursor: pointer;
 }
 
 button:hover{
-	background: #f9fcff;
-    border: 2.3px solid #585e71;
+	background: #869cb2;
+    /* border: 2.3px solid #97AFC7; */
 }
 
 button:active {
     transform: scale(0.95); 
 }
 
-/* actions */
-
-#actionArea {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 12px;
-}
-
-#actionArea button {
-	margin: 8px;
-    text-align: center;
-}
-
-#actionArea p {
-	font-family: "Fredoka", sans-serif;
-	margin-bottom: 10px;
+#startGame {
+	white-space: nowrap;
 }
 
 /* rules */
-#overlay.shown{
-    opacity: 1;
-    visibility: visible;
-    animation: showed 0.5s ease-out forwards; 
-}
-
-#overlay.hidden{
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease-in-out;
-}
 
 #windowed {
 	background-color: rgba(0, 0, 0, 0.5);
@@ -232,6 +261,19 @@ button:active {
     visibility: hidden;
 	transform: translate(-50%, -50%) scale(0.5);
 	transform-origin: center;
+}
+
+#overlay.shown{
+    opacity: 1;
+    visibility: visible;
+    animation: showed 0.5s ease-out forwards; 
+}
+
+#overlay.hidden{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
 }
 
 @keyframes showed {
@@ -259,7 +301,7 @@ button:active {
 	transform:translate(-50%, -50%);
 	border-radius: 24px;
 	background-color: white;
-	padding: 40px 120px;
+	padding: 40px 100px;
 	border: solid 3px #d6e4ed;
 	z-index: 9999;
 }
@@ -267,63 +309,31 @@ button:active {
 #overlay div h1{
 	text-align: center;
 	margin-bottom: 40px;
+	font-size: 3em;
 }
 
 #overlay div p{
-	font-family: "Fredoka", sans-serif;
 	color: #101e33;
-	margin-bottom: 40px;
+	margin-bottom: 32px;
 	text-align: center;
 }
 
-#overlay div button{
-	width: fit-content;
-}
-
-
-/* game actions + penguin image + dice/fish */
-
-#startGame {
-    white-space: nowrap;
-}
-
-/* #penguin-wrapper {
-	position: absolute;
-	width: 0px;
-	right: 0px;
-	bottom: 0px;
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
-} */
+/* other */
 
 .hidden {
-	visibility: hidden;
+	/* visibility: hidden; */
+	display: none;
 }
 
 .visible {
 	visibility: visible;
 }
 
-#penguin {
-	width: 100%;
-	height: auto;
-    max-width: 500px;
-	display: block;
-	/* visibility: hidden; */
-}
-
-.dice {
-	/* dice */
-	width: 40%;
-	margin-top: 12px;
-}
-
 .js-text{
 	font-family: "Fredoka", sans-serif;
 }
 
-/* media */
+/* mobile */
 
 @media screen and (max-width: 600px) {
   
