@@ -67,7 +67,7 @@
     function updateMirror() {
         if (gameData.index === 0) {
             // document.body.style.backgroundImage = "url('images/p1-background.png')";
-            penguinImg.src = 'images/penguin mirrored.png';
+            penguinImg.src = 'images/penguin-mirrored.png';
             diceArea.classList.remove('mirrored');
         } else {
             // document.body.style.backgroundImage = "url('images/p2-background.png')";
