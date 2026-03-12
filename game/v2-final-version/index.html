@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game on final</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Darumadrop+One&family=Dekko&family=DotGothic16&family=Fredoka:wght@300..700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IM+Fell+English:ital@0;1&family=Instrument+Serif&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:wght@100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Walter+Turncoat&display=swap" rel="stylesheet">
+
+    <!-- links -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+
+    <header>
+        <h1>Fish Frenzy</h1>
+        <h3 id="turn-title">Player 1's Turn</h3>
+    </header>
+
+    <!-- how to play -->
+	<div id="windowed"></div>
+
+	<section id="overlay" class="hidden">
+		<div>
+			<h1>How To Play</h1>         
+            <p>To win the Fish Frenzy, be the first penguin to snag 30 fish! On your turn, roll the dice to add fish to your bucket, but watch out for the slippery ice: if you roll a single "1", your fish slip away and your turn ends immediately. You can keep rolling to stack your catch as high as you dare, or choose to pass the turn, safely storing the fish in your bucket. Be careful not to get too greedy, though—rolling Snake Eyes (double 1s) causes a total wipeout, melting your entire game score back to zero.<br><br>Ready to begin?</p>
+			<button>Let's Play!</button>
+        </div>
+	</section> 
+
+    <!-- control buttons -->
+	<div id="controlArea">
+		<button class="icon" id="volume">
+			<img src="images/no_sound.png" alt="mute">
+		</button>
+		<button id="rules">rules</button>
+        <!-- restart button -->
+	</div>
+
+    <!-- main game area -->
+    <main id="gameArea">
+
+        <!-- left player 1 -->
+        <section id="player-column">
+
+            <img class="bucket" src="images/bucket.png" alt="bucket">
+            <div id="player1">
+                <div class="score-div">
+                    <h2 class="player-text">Player 1</h2>
+                    <h2 class="score-text" id="score1">0</h2>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- actions + img -->
+        <section id="actionArea">
+
+            <section id="penguin-wrapper">
+                <img id='penguin' src="images/penguin mirrored.png" alt="penguin">
+                <div id="game"></div>  <!-- adds dice/fish + roll/pass buttons -->
+
+            </section>
+
+            <div id="action-start">
+                <button id="startGame">Start New Game</button>
+            </div>
+
+        </section>
+
+        <!-- right player 2 -->
+        <section id="player-column">
+
+            <img class="bucket" src="images/bucket.png" alt="bucket">
+            <div id="player2">
+                <div class="score-div">
+                    <h2 class="player-text">Player 2</h2>
+                    <h2 class="score-text" id="score2">0</h2>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    
+    
+</body>
+</html>
