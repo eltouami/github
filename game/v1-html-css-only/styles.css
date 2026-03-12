@@ -7,7 +7,7 @@ nav ul, nav ol {
 	list-style-type: none;
 }
 
-h1, h2, h3, h4, p, a, button, label, input{
+p, a, button, label, input{
 	font-family: "Fredoka";
 	margin: 0;
 	padding: 0;
